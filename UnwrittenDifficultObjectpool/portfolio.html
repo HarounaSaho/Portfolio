@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harouna Saho - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        p {
+            color: #333333;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h2 {
+            color: #0078d4;
+        }
+        section {
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        figure img {
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        figure img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        figcaption{
+            color: #333333;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .tab {
+            padding: 0.5rem 1rem;
+            border-radius: 8px 8px 0 0;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .tab.active {
+            background-color: #0078d4;
+            color: white;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong><a href="index.html">Harouna Saho</a></strong></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showSection('projects')">Projects</div>
+            <div class="tab" onclick="showSection('artwork')">Artwork</div>
+            <div class="tab" onclick="showSection('logos')">Logos</div>
+        </div>
+
+        <section id="projects" class="content active">
+            <h2>Projects</h2>
+            <div class="grid">
+                <figure>
+                    <a href="project1.html">
+                        <img src="https://source.unsplash.com/600x400/?technology,design" alt="Yale Trivia App">
+                    </a>
+                    <figcaption>Yale Trivia App</figcaption>
+                </figure>
+                <figure>
+                    <a href="project2.html">
+                        <img src="https://source.unsplash.com/600x400/?art,mural" alt="Bright Spaces Murals">
+                    </a>
+                    <figcaption>Bright Spaces Murals</figcaption>
+                </figure>
+                <figure>
+                    <a href="project3.html">
+                        <img src="https://source.unsplash.com/600x400/?sculpture,design" alt="3D Sculpture Design">
+                    </a>
+                    <figcaption>3D Sculpture Design</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="artwork" class="content">
+            <h2>Artwork</h2>
+            <div class="grid">
+                <figure>
+                    <img src="https://i.ibb.co/7jSd8Kz/Untitled-Artwork-6.jpg" alt="Digital Illustration" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+                <figure>
+                    <img src="https://i.ibb.co/zbF7Vh0/Untitled-Artwork-5.jpg" alt="Digital Illustration" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+                <figure>
+                    <img src="https://i.ibb.co/XZ4r6F5/4-A1-B377-B-7224-430-C-8-F36-D7812120-E1-DA.png" alt="Digital Illustration" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+
+                <figure>
+                    <img src="https://i.ibb.co/qrqGk3v/IMG-2076.png" alt="Digital Illustration" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+
+                <figure>
+                    <img src="https://i.ibb.co/kMStP7K/IMG-2716-3.png" alt="Digital Illustration" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+
+      
+
+                <figure>
+                    <img src="https://i.ibb.co/2WDjrqj/IMG-2865.png" alt="Digital Illustration" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+            </div>
+        </section>
+
+        <section id="logos" class="content">
+            <h2>Logos</h2>
+            <div class="grid">
+                <figure>
+                    <img src="https://i.ibb.co/R0bz5PH/IMG-2496.png" alt="Logo 1" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+                <figure>
+                    <img src="https://i.ibb.co/d5BN632/IMG-2114.png" alt="Logo 2" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+                <figure>
+                    <img src="https://i.ibb.co/MMMrdCK/d8b9fd6f-01f4-4863-a3c8-f5887a4331d0.jpg" alt="Logo 3" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            document.querySelector(`.tab[onclick="showSection('${sectionId}')"]`).classList.add('active');
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
